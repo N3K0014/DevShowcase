@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; style-src 'self' https://cdn.jsdelivr.net; script-src 'self' https://cdn.jsdelivr.net; font-src 'self' https://cdn.jsdelivr.net; img-src 'self' data:; connect-src 'self'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';"
+  />
+  <title>DevShowcase</title>
+
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css"
+  />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand fw-semibold" href="#home">
+        <i class="bi bi-code-slash me-2"></i>DevShowcase
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navMenu"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="hero text-center" id="home">
+    <div class="container">
+      <h1 class="display-4 fw-bold mb-3">Mave Rayner V. Memije</h1>
+      <p class="lead mx-auto mb-4">
+        Welcome! I’m a graduate with a growing interest in software development, networking, and building practical digital solutions.
+      </p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="#about" class="btn btn-primary btn-lg">About Me</a>
+        <a href="#skills" class="btn btn-outline-light btn-lg">View Skills</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="section">
+    <div class="container">
+      <div class="row align-items-center g-4">
+        <div class="col-lg-7">
+          <div class="info-card">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-text">
+              I am a motivated and adaptable learner with a growing interest in information technology, software development, and system support.
+            </p>
+            <p class="section-text">
+              My goal is to build strong technical skills through hands-on experience, continuous learning, and practical problem-solving.
+            </p>
+            <p class="section-text mb-0">
+              I enjoy working with technology, understanding how systems work, and creating solutions that are useful, efficient, and easy to maintain.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="profile-panel text-center">
+            <img src="assets/images/MEMIJE, MAVE RAYNER.JPG" alt="Mave Rayner V. Memije" class="profile-image">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section section-alt">
+    <div class="container">
+      <h2 class="section-title text-center">Skills</h2>
+      <p class="section-subtitle text-center">Technical strengths and areas of interest</p>
+      <div class="row g-4 mt-2">
+        <div class="col-md-4">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-palette"></i></div>
+            <h5>Web Development</h5>
+            <p>HTML, CSS, JavaScript, Bootstrap, creating responsive interfaces</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-server"></i></div>
+            <h5>IT & Systems</h5>
+            <p>Networking basics, troubleshooting, system support, and understanding technical environments</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="skill-card">
+            <div class="skill-icon"><i class="bi bi-tools"></i></div>
+            <h5>Learning & Problem Solving</h5>
+            <p>Adaptability, research, debugging, and improving technical skills through practice</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <div class="container">
+      <h2 class="section-title text-center text-white">Contact</h2>
+      <p class="section-subtitle text-center text-light">Feel free to connect with me for opportunities or collaboration</p>
+      <div class="row justify-content-center g-4">
+        <div class="col-lg-5">
+          <div class="contact-card">
+            <h5 class="fw-semibold mb-3 text-white">Get in touch</h5>
+            <ul class="list-unstyled contact-list mb-0">
+              <li><i class="bi bi-envelope-fill"></i>memije.maverayner@gmail.com</li>
+              <li><i class="bi bi-telephone-fill"></i>+63 946 734 3392</li>
+              <li><i class="bi bi-geo-alt-fill"></i>Meycauayan, Bulacan, Philippines</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-lg-5">
+          <div class="contact-card">
+            <h5 class="fw-semibold mb-3 text-white">Connect</h5>
+            <div class="social-links">
+              <a href="https://github.com/N3K0014" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+              <a href="https://www.linkedin.com/in/mave-rayner-memije-0b666a341" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+              <button type="button" id="openEmailModal" class="social-link-text btn btn-light" aria-label="Send email">
+                <i class="bi bi-envelope"></i>
+                <span>Send email</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="modal fade" id="emailModal" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Send me a message</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form id="emailForm">
+              <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+              </div>
+              <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+              </div>
+              <div class="d-grid">
+                <button type="submit" class="btn btn-primary">Send</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="#home" class="back-to-top btn btn-primary rounded-circle" aria-label="Return to top">
+    <i class="bi bi-arrow-up"></i>
+  </a>
+
+  <footer>
+    <div class="container text-center">
+      <p class="mb-0">&copy; 2026 DevShowcase</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
