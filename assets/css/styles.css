@@ -33,6 +33,11 @@ body {
 .navbar {
   background: linear-gradient(90deg, #0f172a, #1e3a8a);
 }
+/*
+  Global design tokens and site-wide CSS variables.
+  - Keep color and spacing tokens here so they are reused across pages.
+  - Changing these values affects the entire site (primary color, background, text).
+*/
 
 /* Ensure nav text remains visible on the dark navbar background. */
 .navbar-brand,
@@ -48,10 +53,20 @@ body {
   color: #fff;
   padding: clamp(5rem, 9vw, 7rem) 0;
 }
+/* Navbar/link color notes:
+   - `.navbar` uses a dark gradient background for contrast.
+   - `.navbar-brand` and `.nav-link` are forced to a light color for readability.
+   - `!important` is used to override Bootstrap defaults where necessary.
+*/
 
 /* Text styling for the hero subtitle paragraph. */
 .hero .lead {
   max-width: 700px;
+/*
+  Section utilities
+  - `.section` provides consistent vertical spacing between major page blocks.
+  - `.section-alt` is used for alternating backgrounds (white surface vs. page background).
+*/
   color: #cbd5e1;
   font-size: clamp(1rem, 2vw, 1.25rem);
 }
@@ -67,6 +82,10 @@ body {
 }
 
 /* Section headings use responsive sizing and strong weight. */
+/* Card components
+   - Reused by About, Skills, and Projects sections.
+   - Keep padding/typography small and component-specific styles in the page CSS (e.g. home.css).
+*/
 .section-title {
   font-size: clamp(1.8rem, 3vw, 2rem);
   font-weight: 700;
@@ -87,6 +106,10 @@ body {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: 1rem;
+/* Project card visuals
+   - Provides a tall color block that visually represents a project.
+   - Variants (`.project-two`, `.project-three`) are decorative gradients.
+*/
   box-shadow: var(--shadow);
 }
 
@@ -107,6 +130,10 @@ body {
   background: transparent;
   border-radius: 1rem;
   min-height: clamp(260px, 38vw, 360px);
+/* Social link buttons
+   - Small circular elements used in the contact area to link to external profiles.
+   - Kept white so icons remain visible on the dark contact background.
+*/
   display: flex;
   align-items: center;
   justify-content: center;
@@ -123,12 +150,19 @@ body {
   object-position: center;
   display: block;
   border: 2px solid #e2e8f0;
+/* Floating Back-to-top
+   - Hidden by default, toggled via JS when the user scrolls down.
+   - Kept accessible with `aria-label` in the HTML.
+*/
   border-radius: 1rem;
   box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
   background: #ffffff;
   outline: none;
 }
 
+/* Responsive helpers
+   - Media queries are intentionally narrow and only change layout/padding for small screens.
+*/
 /* Skill cards are centered and sized to fill available space. */
 .skill-card {
   padding: 1.5rem 1rem;

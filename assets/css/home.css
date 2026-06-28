@@ -1,5 +1,18 @@
 /* Home-specific styles moved from styles.css */
 
+/*
+	Home page stylesheet
+
+	Purpose:
+	- Contains styles that are specific to the home page only (hero, profile panel, project visuals).
+	- Keeps page-level decorative rules separate from `styles.css` which holds site-wide tokens and components.
+
+	Maintenance notes:
+	- Only add selectors here that are used exclusively on the home page markup.
+	- Avoid redefining color variables here; update tokens in `styles.css` when needed.
+	- Small responsive tweaks for the home layout live here.
+*/
+
 .hero {
 	background:
 		radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 18%),
@@ -8,11 +21,21 @@
 	padding: clamp(5rem, 9vw, 7rem) 0;
 }
 
+/* Hero block
+	 - Large, attention-grabbing header for the landing page.
+	 - Uses layered gradients for a subtle decorative effect.
+	 - Padding uses `clamp()` to scale between a sensible min and max.
+*/
+
 .hero .lead {
 	max-width: 700px;
 	color: #cbd5e1;
 	font-size: clamp(1rem, 2vw, 1.25rem);
 }
+
+/* Hero lead paragraph
+	 - Constrains line-length for readability and scales text responsively.
+*/
 
 .profile-panel {
 	background: transparent;
@@ -23,6 +46,10 @@
 	justify-content: center;
 	overflow: hidden;
 }
+
+/* Profile panel
+	 - Centers the profile image and ensures a consistent visual block height.
+*/
 
 .profile-image {
 	width: 100%;
@@ -39,6 +66,11 @@
 	outline: none;
 }
 
+/* Profile image
+	 - Constrain dimensions to keep layout stable across devices.
+	 - `object-fit: cover` preserves aspect ratio while filling the container.
+*/
+
 .project-media {
 	height: clamp(180px, 22vw, 220px);
 	display: flex;
@@ -48,6 +80,11 @@
 	font-size: clamp(2rem, 4vw, 3rem);
 	background: linear-gradient(135deg, #2563eb, #7c3aed);
 }
+
+/* Project media block
+	 - Used to create a colorful, visual header within each project card.
+	 - Keep content minimal (icon or short title) to preserve the visual.
+*/
 
 .project-two {
 	background: linear-gradient(135deg, #ec4899, #ef4444);
@@ -66,3 +103,7 @@
 		flex-direction: column;
 	}
 }
+
+/* Mobile-specific home tweaks
+	 - Stack action buttons under the hero on narrow viewports for better tap targets.
+*/

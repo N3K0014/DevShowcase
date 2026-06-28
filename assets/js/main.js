@@ -28,6 +28,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Toggle visibility of the floating back-to-top button during scrolling.
   if (backToTopButton) {
+    // The threshold (300px) was chosen to balance early visibility without being distracting.
+    // Adjust `300` if you want the button to appear earlier or later during scroll.
     const toggleBackToTop = function () {
       if (window.scrollY > 300) {
         backToTopButton.classList.add('visible');
@@ -55,6 +57,9 @@ document.addEventListener('DOMContentLoaded', function () {
     if (!name || !senderEmail || !message) return;
 
     // Encode values for safe inclusion in a mailto URL.
+    // Note: `mailto:` opens the user's email client — it is not a secure transport and
+    // should be used only for convenience. Consider server-side handling (SMTP/API)
+    // for production forms that must be reliably delivered or validated.
     const subject = encodeURIComponent('Message from your website');
     const body = encodeURIComponent(
       `Name: ${name}\nEmail: ${senderEmail}\n\n${message}`

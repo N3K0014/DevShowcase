@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Head metadata and stylesheet links.
+       Note: `styles.css` contains global tokens and components; `home.css` currently holds home-specific visuals
+       but is included here to reuse shared component styles. Keep CSS ordering: general -> page-specific. -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Skills — DevShowcase</title>
@@ -10,6 +13,7 @@
   <link rel="stylesheet" href="assets/css/home.css" />
 </head>
 <body>
+  <!-- Navigation: links back to the home page and to contact anchors on the home page. -->
   <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
     <div class="container">
       <a class="navbar-brand fw-semibold" href="index.html">
@@ -28,6 +32,8 @@
     </div>
   </nav>
 
+  <!-- Main content: detailed breakdown of skills, tools, and representative projects.
+       This page is standalone and can be maintained independently of the home summary. -->
   <main class="section">
     <div class="container">
       <h1 class="section-title text-center">Detailed Skills</h1>
@@ -84,6 +90,7 @@
       </section>
 
       <div class="text-center mt-5">
+        <!-- Return to the home page summary. Use site-wide components from `styles.css` for consistency. -->
         <a href="index.html" class="btn btn-outline-primary">Back to Home</a>
       </div>
     </div>
