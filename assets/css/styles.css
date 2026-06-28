@@ -9,12 +9,27 @@
 :root {
   --bg: #f7f9fc; /* Page background color */
   --surface: #ffffff; /* Card and panel backgrounds */
+  --surface-alt: #ffffff; /* Alternate section background */
   --text: #0f172a; /* Primary text color */
   --muted: #64748b; /* Paragraph and secondary text color */
   --primary: #2563eb; /* Primary brand color */
   --primary-dark: #1d4ed8; /* Darker primary color for hover states */
   --border: #e2e8f0; /* Light border for cards and panels */
   --shadow: 0 12px 32px rgba(15, 23, 42, 0.08); /* Soft drop shadow */
+  color-scheme: light;
+}
+
+body[data-theme="dark"] {
+  --bg: #020617;
+  --surface: #0f172a;
+  --surface-alt: #111827;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --primary: #60a5fa;
+  --primary-dark: #3b82f6;
+  --border: rgba(148, 163, 184, 0.28);
+  --shadow: 0 16px 40px rgba(2, 6, 23, 0.45);
+  color-scheme: dark;
 }
 
 /* Enable smooth scrolling for internal anchor navigation. */
@@ -27,6 +42,7 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 /* Navbar background uses a dark gradient to contrast with page sections. */
@@ -63,7 +79,7 @@ body {
 
 /* Alternate background for non-hero sections to separate content visually. */
 .section-alt {
-  background: #fff;
+  background: var(--surface-alt);
 }
 
 /* Section headings use responsive sizing and strong weight. */
@@ -171,13 +187,30 @@ body {
 /* Reusable technology badge styling for future content tags. */
 .badge-tech {
   display: inline-block;
-  background: #eef4ff;
+  background: rgba(37, 99, 235, 0.12);
   color: var(--primary);
   font-size: 0.85rem;
   font-weight: 600;
   padding: 0.35rem 0.65rem;
   border-radius: 999px;
   margin: 0.2rem;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+body[data-theme="dark"] .theme-toggle {
+  color: #f8fafc;
+  border-color: rgba(248, 250, 252, 0.25);
+}
+
+body[data-theme="dark"] .theme-toggle:hover {
+  color: #f8fafc;
+  background: rgba(255, 255, 255, 0.1);
 }
 
 /* Contact section uses a darker gradient to stand out from other content. */
@@ -223,6 +256,41 @@ body {
 .nav-link:hover,
 .navbar-brand:hover {
   color: #bfdbfe;
+}
+
+body[data-theme="dark"] .social-links a,
+body[data-theme="dark"] .social-links button {
+  background: var(--surface);
+  color: var(--text);
+  border: 1px solid var(--border);
+}
+
+body[data-theme="dark"] .modal-content {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body[data-theme="dark"] .modal-header,
+body[data-theme="dark"] .modal-footer {
+  border-color: var(--border);
+}
+
+body[data-theme="dark"] .form-control {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--border);
+}
+
+body[data-theme="dark"] .form-control:focus {
+  background: var(--bg);
+  color: var(--text);
+  border-color: var(--primary);
+  box-shadow: 0 0 0 0.2rem rgba(96, 165, 250, 0.25);
+}
+
+body[data-theme="dark"] .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
 }
 
 /* Social links are grouped and wrapped on smaller screens. */

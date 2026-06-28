@@ -6,33 +6,33 @@ The website is self-hosted on my homelab environment and exposed to the internet
 
 ## Overview
 
-This portfolio was created to provide a professional online presence where visitors, recruiters, and fellow developers can learn more about my technical background, projects, and ongoing work.
+This portfolio was created to provide a professional online presence where visitors, recruiters, and fellow developers can learn more about my technical background and interests.
 
-The site includes a home-page skills summary with a button to a separate detailed skills page, and CSS is organized into general site styles plus home-specific styles for easier maintenance.
+The site includes a home page with an overview of my profile, a separate detailed skills page, and a contact section with a modal email form. The styling is organized into shared site styles and page-specific styling for easier maintenance.
 
-The repository also serves as a development log and source control repository for tracking improvements, features, and deployment configurations.
+The repository also serves as a development log and source control hub for tracking improvements and future enhancements.
 
 ## Features
 
 Current features include:
 
 - Responsive web design using Bootstrap
-- Hero section with personal introduction
+- Hero section with a personal introduction
 - Home page skills summary and a separate detailed skills page
 - GitHub and LinkedIn integration
+- Contact section with an email modal form
+- Dark mode toggle with theme persistence
 - Project structure using HTML, CSS, and JavaScript
-- Contact section with email modal
-- Self-hosted deployment via homelab
 - Cloudflare integration for public access
 
 Planned features include:
 
 - Project showcase section
 - Professional experience timeline
-- Contact section improvements
 - Downloadable resume
-- Dark mode support
 - Additional homelab project documentation
+- Additional portfolio sections and case studies
+- Self-hosted deployment via homelab
 
 ## Technology Stack
 
@@ -71,9 +71,9 @@ DevShowcase/
 
 ## Development Workflow
 
-The project is developed locally using Visual Studio Code and tested using Live Server.
+The project is developed locally using Visual Studio Code and previewed with a live server during iteration.
 
-Version control is managed using GitHub Desktop, with changes pushed to GitHub for backup and version tracking.
+Version control is managed through Git and GitHub for backup, review, and version tracking.
 
 ## Goals
 
@@ -93,7 +93,7 @@ The primary goals of this project are:
 
 The website is currently under development. Core structure, layout, Bootstrap integration, and external profile links have been implemented.
 
-Additional sections and improvements will be added over time.
+Additional sections and refinements can be added over time as the portfolio grows.
 
 ## Repository Purpose
 
