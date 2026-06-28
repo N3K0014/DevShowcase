@@ -8,6 +8,8 @@ The website is self-hosted on my homelab environment and exposed to the internet
 
 This portfolio was created to provide a professional online presence where visitors, recruiters, and fellow developers can learn more about my technical background, projects, and ongoing work.
 
+The site includes a home-page skills summary with a button to a separate detailed skills page, and CSS is organized into general site styles plus home-specific styles for easier maintenance.
+
 The repository also serves as a development log and source control repository for tracking improvements, features, and deployment configurations.
 
 ## Features
@@ -16,16 +18,16 @@ Current features include:
 
 - Responsive web design using Bootstrap
 - Hero section with personal introduction
+- Home page skills summary and a separate detailed skills page
 - GitHub and LinkedIn integration
 - Project structure using HTML, CSS, and JavaScript
-- Contact form for sending messages via email
+- Contact section with email modal
 - Self-hosted deployment via homelab
 - Cloudflare integration for public access
 
 Planned features include:
 
 - Project showcase section
-- Skills and technology stack section
 - Professional experience timeline
 - Contact section improvements
 - Downloadable resume
@@ -55,10 +57,16 @@ Planned features include:
 ```text
 DevShowcase/
 ├── index.html
+├── skills.html
 ├── README.md
 └── assets/
-    ├── style.css
-    └── script.js
+    ├── css/
+    │   ├── home.css
+    │   └── styles.css
+    ├── js/
+    │   └── main.js
+    ├── images/
+    └── icons/
 ```
 
 ## Development Workflow

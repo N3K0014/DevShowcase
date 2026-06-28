@@ -1,0 +1,68 @@
+/* Home-specific styles moved from styles.css */
+
+.hero {
+	background:
+		radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 18%),
+		linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+	color: #fff;
+	padding: clamp(5rem, 9vw, 7rem) 0;
+}
+
+.hero .lead {
+	max-width: 700px;
+	color: #cbd5e1;
+	font-size: clamp(1rem, 2vw, 1.25rem);
+}
+
+.profile-panel {
+	background: transparent;
+	border-radius: 1rem;
+	min-height: clamp(260px, 38vw, 360px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	overflow: hidden;
+}
+
+.profile-image {
+	width: 100%;
+	height: auto;
+	max-width: 320px;
+	max-height: 320px;
+	object-fit: cover;
+	object-position: center;
+	display: block;
+	border: 2px solid #e2e8f0;
+	border-radius: 1rem;
+	box-shadow: 0 8px 18px rgba(15, 23, 42, 0.08);
+	background: #ffffff;
+	outline: none;
+}
+
+.project-media {
+	height: clamp(180px, 22vw, 220px);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: clamp(2rem, 4vw, 3rem);
+	background: linear-gradient(135deg, #2563eb, #7c3aed);
+}
+
+.project-two {
+	background: linear-gradient(135deg, #ec4899, #ef4444);
+}
+
+.project-three {
+	background: linear-gradient(135deg, #14b8a6, #0ea5e9);
+}
+
+@media (max-width: 767.98px) {
+	.hero .btn {
+		width: 100%;
+	}
+
+	.hero .d-flex {
+		flex-direction: column;
+	}
+}
