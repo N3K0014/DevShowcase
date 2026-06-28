@@ -1,64 +1,86 @@
+/*
+  styles.css
+  Project-specific styling for DevShowcase.
+  This file defines the visual theme, layout, card styles, responsive behavior,
+  and component appearance used throughout the portfolio website.
+*/
+
+/* Theme variables for consistent colors, elevation, and spacing. */
 :root {
-  --bg: #f7f9fc;
-  --surface: #ffffff;
-  --text: #0f172a;
-  --muted: #64748b;
-  --primary: #2563eb;
-  --primary-dark: #1d4ed8;
-  --border: #e2e8f0;
-  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+  --bg: #f7f9fc; /* Page background color */
+  --surface: #ffffff; /* Card and panel backgrounds */
+  --text: #0f172a; /* Primary text color */
+  --muted: #64748b; /* Paragraph and secondary text color */
+  --primary: #2563eb; /* Primary brand color */
+  --primary-dark: #1d4ed8; /* Darker primary color for hover states */
+  --border: #e2e8f0; /* Light border for cards and panels */
+  --shadow: 0 12px 32px rgba(15, 23, 42, 0.08); /* Soft drop shadow */
 }
 
+/* Enable smooth scrolling for internal anchor navigation. */
 html {
   scroll-behavior: smooth;
 }
 
+/* Base page typography and background for the entire site. */
 body {
   background: var(--bg);
   color: var(--text);
   font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
+/* Navbar background uses a dark gradient to contrast with page sections. */
 .navbar {
   background: linear-gradient(90deg, #0f172a, #1e3a8a);
 }
 
+/* Ensure nav text remains visible on the dark navbar background. */
 .navbar-brand,
 .nav-link {
   color: #f8fafc !important;
 }
 
-.navbar-brand:hover,
-.nav-link:hover {
-  color: #dbeafe !important;
+/* Hero section visual design and spacing. */
+.hero {
+  background:
+    radial-gradient(circle at top right, rgba(37, 99, 235, 0.18), transparent 18%),
+    linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #fff;
+  padding: clamp(5rem, 9vw, 7rem) 0;
 }
 
-.navbar-brand.active,
-.nav-link.active {
-  color: #e2e8f0 !important;
+/* Text styling for the hero subtitle paragraph. */
+.hero .lead {
+  max-width: 700px;
+  color: #cbd5e1;
+  font-size: clamp(1rem, 2vw, 1.25rem);
 }
 
-
+/* General vertical spacing for all section blocks. */
 .section {
   padding: clamp(3.5rem, 6vw, 5rem) 0;
 }
 
+/* Alternate background for non-hero sections to separate content visually. */
 .section-alt {
   background: #fff;
 }
 
+/* Section headings use responsive sizing and strong weight. */
 .section-title {
   font-size: clamp(1.8rem, 3vw, 2rem);
   font-weight: 700;
   margin-bottom: 0.75rem;
 }
 
+/* Section subtitle text with muted color and spacing. */
 .section-subtitle {
   color: var(--muted);
   margin-bottom: 2rem;
   font-size: clamp(0.95rem, 1.6vw, 1rem);
 }
 
+/* Shared card styling for informational panels and feature cards. */
 .info-card,
 .skill-card,
 .project-card {
@@ -68,16 +90,19 @@ body {
   box-shadow: var(--shadow);
 }
 
+/* Additional padding on the about/info card for readability. */
 .info-card {
   padding: clamp(1.25rem, 3vw, 2rem);
 }
 
+/* Paragraph body text styling used in content sections. */
 .section-text {
   color: var(--muted);
   line-height: 1.8;
   font-size: clamp(0.98rem, 1.2vw, 1rem);
 }
 
+/* Container for the profile image, centered and clipped gracefully. */
 .profile-panel {
   background: transparent;
   border-radius: 1rem;
@@ -88,6 +113,7 @@ body {
   overflow: hidden;
 }
 
+/* Profile image appearance and responsive maximum sizing. */
 .profile-image {
   width: 100%;
   height: auto;
@@ -103,23 +129,27 @@ body {
   outline: none;
 }
 
+/* Skill cards are centered and sized to fill available space. */
 .skill-card {
   padding: 1.5rem 1rem;
   text-align: center;
   height: 100%;
 }
 
+/* Icon styling inside each skill card. */
 .skill-icon {
   font-size: 2rem;
   color: var(--primary);
   margin-bottom: 0.75rem;
 }
 
+/* Placeholder project card styling kept for future expansion. */
 .project-card {
   overflow: hidden;
   height: 100%;
 }
 
+/* Example project media styling for future project cards. */
 .project-media {
   height: clamp(180px, 22vw, 220px);
   display: flex;
@@ -138,6 +168,7 @@ body {
   background: linear-gradient(135deg, #14b8a6, #0ea5e9);
 }
 
+/* Reusable technology badge styling for future content tags. */
 .badge-tech {
   display: inline-block;
   background: #eef4ff;
@@ -149,14 +180,17 @@ body {
   margin: 0.2rem;
 }
 
+/* Contact section uses a darker gradient to stand out from other content. */
 .contact {
   background: linear-gradient(135deg, #0f172a, #1e3a8a);
 }
 
+/* Contact section subtitle color to improve contrast on dark background. */
 .contact .section-subtitle {
   color: #dbeafe;
 }
 
+/* Contact cards maintain the same elevated style as other card elements. */
 .contact-card {
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.12);
@@ -165,6 +199,7 @@ body {
   height: 100%;
 }
 
+/* Contact list items align icons with text and use spacing for readability. */
 .contact-list li {
   display: flex;
   align-items: center;
@@ -173,6 +208,7 @@ body {
   margin-bottom: 0.9rem;
 }
 
+/* Preserve inherited link color and remove underline decoration. */
 .contact-list a,
 .social-links a,
 .nav-link,
@@ -181,6 +217,7 @@ body {
   text-decoration: none;
 }
 
+/* Hover states for links to provide visual feedback. */
 .contact-list a:hover,
 .social-links a:hover,
 .nav-link:hover,
@@ -188,12 +225,14 @@ body {
   color: #bfdbfe;
 }
 
+/* Social links are grouped and wrapped on smaller screens. */
 .social-links {
   display: flex;
   gap: 0.8rem;
   flex-wrap: wrap;
 }
 
+/* Button and social icon styles for consistent shape and spacing. */
 .social-links a,
 .social-links button {
   display: inline-flex;
@@ -210,17 +249,20 @@ body {
   border: 0;
 }
 
+/* Slight lift on hover to indicate interactivity. */
 .social-links a:hover,
 .social-links button:hover {
   transform: translateY(-2px);
 }
 
+/* Text button variant for the email modal trigger. */
 .social-link-text {
   gap: 0.4rem;
   font-size: 0.95rem;
   font-weight: 600;
 }
 
+/* Back-to-top button is initially hidden and shown by JavaScript. */
 .back-to-top {
   position: fixed;
   right: 1rem;
@@ -237,22 +279,61 @@ body {
   transition: opacity 0.2s ease, visibility 0.2s ease;
 }
 
+/* Visible state for the back-to-top button when page is scrolled. */
 .back-to-top.visible {
   opacity: 1;
   visibility: visible;
 }
 
+/* Footer styling for the page bottom. */
 footer {
   background: #0b1120;
   color: #94a3b8;
   padding: 1.4rem 0;
 }
 
+/* Mobile-specific adjustments for smaller screens. */
 @media (max-width: 767.98px) {
+  .hero .btn {
+    width: 100%;
+  }
+
+  .hero .d-flex {
+    flex-direction: column;
+  }
+}
+
+/* Extra responsive rules enhance readability and compact layouts. */
+@media (max-width: 575.98px) {
+  .navbar-brand {
+    font-size: 0.95rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .info-card,
+  .skill-card,
+  .project-card {
+    border-radius: 0.85rem;
+  }
+}
+
+/* Primary button theme colors used consistently across the site. */
+.btn-primary {
+  background: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-primary:hover {
+  background: var(--primary-dark);
+  border-color: var(--primary-dark);
+}
+
   .contact form {
     padding: 0 0.25rem;
   }
-}
 
 .btn-primary {
   background: var(--primary);
